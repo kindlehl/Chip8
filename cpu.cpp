@@ -291,12 +291,11 @@ void CPU::ClearScreen(){
 
 void CPU::cycle(){
     
-    
-    bool PCmoved = false;
-    
     opcode = memory[PC] << 8;    //grab first byte of instruction
 
     opcode += memory[PC+1];  //shift over byte and add second byte of instruction
+    PC +=2;
+
     switch(opcode & 0xF000){    //check most significant nibble
         case 0x0000:    //most significant nibble is zero
             
@@ -307,37 +306,31 @@ void CPU::cycle(){
                 case 0x00EE:        //00EE return from subroutine
                     PC = stack[stackPointer];
                     stackPointer--;
-                    PCmoved = true;
                     break;
             }
             break;
         case 0x1000: // 1nnn - jump to nnn
             PC = opcode & 0x0FFF;
-            PCmoved = true;
             break;
         case 0x2000:
             stackPointer++;
             stack[stackPointer] = PC+2;
             PC = opcode & 0x0FFF;
-            PCmoved = true;
             break;
         case 0x3000:
             if(registers[(opcode & 0x0F00) >> 8] == (int)(opcode & 0x00FF)){
-                PC +=4;
-                PCmoved = true;
+                PC +=2;
             }
             break;
         case 0x4000:
             if(registers[(opcode & 0x0F00) >> 8] != (int)(opcode & 0x00FF)){
-               PC +=4;
-               PCmoved = true;
+               PC +=2;
             }
             break;
 
         case 0x5000:
             if(registers[(opcode & 0x0F00) >> 8] == registers[(opcode & 0x00F0) >> 4]){
-                PC += 4;
-                PCmoved = true;
+                PC += 2;
             }
             break;
         case 0x6000:
@@ -406,8 +399,7 @@ void CPU::cycle(){
             break;
         case 0x9000:
             if(registers[(opcode & 0x0F00) >> 8] != registers[(opcode & 0x00F0) >> 4]){
-                PC += 4;
-                PCmoved = true;
+                PC += 2;
             }
             break;
         case 0xA000:
@@ -415,7 +407,6 @@ void CPU::cycle(){
             break;
         case 0xB000:
             PC = ((opcode & 0x0FFF) + registers[0x0]);
-            PCmoved = true;
             break;
         case 0xC000:
             registers[(opcode & 0x0F00) >> 8] = rand()%256 & (opcode & 0x00FF);
@@ -427,14 +418,12 @@ void CPU::cycle(){
             switch(opcode & 0xF00F){
                 case 0xE00E:
                     if(wasPressed(registers[(opcode & 0x0F00) >> 8])){
-                        PC+=4;
-                        PCmoved = true;
+                        PC+=2;
                     }
                     break;
                 case 0xE001:
                     if(!wasPressed(registers[(opcode & 0x0F00) >> 8])){
-                        PC += 4;
-                        PCmoved = true;
+                        PC += 2;
                     }
                     break;
 
@@ -485,9 +474,7 @@ void CPU::cycle(){
             break;
     }
 
-    if(!PCmoved){
-        PC+=2;
-    }
+  
 
     if(delayTimer > 0)
         delayTimer--;
