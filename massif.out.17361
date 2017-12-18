@@ -1,0 +1,1485 @@
+desc: (none)
+cmd: ./Chip8 PONG
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=28673276
+mem_heap_B=378580
+mem_heap_extra_B=34180
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=65555962
+mem_heap_B=379020
+mem_heap_extra_B=34212
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=117659076
+mem_heap_B=663411
+mem_heap_extra_B=69205
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=141940480
+mem_heap_B=914076
+mem_heap_extra_B=116100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=179468559
+mem_heap_B=1694998
+mem_heap_extra_B=253754
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=205674830
+mem_heap_B=2714720
+mem_heap_extra_B=621328
+mem_stacks_B=0
+heap_tree=detailed
+n9: 2714720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 915987 0xB039577: g_malloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n3: 802416 0xB0510F4: g_slice_alloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+   n2: 511056 0xB02F824: g_list_prepend (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+    n2: 451104 0x166C8166: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+     n2: 427752 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+      n2: 407808 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+       n2: 390384 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+        n2: 375216 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+         n2: 361224 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+          n2: 348216 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+           n2: 336096 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+            n2: 324720 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+             n2: 314064 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+              n2: 303912 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+               n2: 294240 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                n2: 285024 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                 n2: 276240 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                  n2: 267864 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                   n2: 259824 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                    n2: 252096 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                     n2: 244656 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                      n2: 237504 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                       n2: 230616 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                        n2: 223992 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                         n2: 217632 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                          n2: 211512 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                           n2: 205608 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                            n2: 199920 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                             n2: 194448 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                              n0: 189168 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                              n0: 5280 in 2 places, all below massif's threshold (1.00%)
+                             n0: 5472 in 2 places, all below massif's threshold (1.00%)
+                            n0: 5688 in 2 places, all below massif's threshold (1.00%)
+                           n0: 5904 in 2 places, all below massif's threshold (1.00%)
+                          n0: 6120 in 2 places, all below massif's threshold (1.00%)
+                         n0: 6360 in 2 places, all below massif's threshold (1.00%)
+                        n0: 6624 in 2 places, all below massif's threshold (1.00%)
+                       n0: 6888 in 2 places, all below massif's threshold (1.00%)
+                      n0: 7152 in 2 places, all below massif's threshold (1.00%)
+                     n0: 7440 in 2 places, all below massif's threshold (1.00%)
+                    n0: 7728 in 2 places, all below massif's threshold (1.00%)
+                   n0: 8040 in 2 places, all below massif's threshold (1.00%)
+                  n0: 8376 in 2 places, all below massif's threshold (1.00%)
+                 n0: 8784 in 2 places, all below massif's threshold (1.00%)
+                n0: 9216 in 2 places, all below massif's threshold (1.00%)
+               n0: 9672 in 2 places, all below massif's threshold (1.00%)
+              n0: 10152 in 2 places, all below massif's threshold (1.00%)
+             n0: 10656 in 2 places, all below massif's threshold (1.00%)
+            n0: 11376 in 2 places, all below massif's threshold (1.00%)
+           n0: 12120 in 2 places, all below massif's threshold (1.00%)
+          n0: 13008 in 2 places, all below massif's threshold (1.00%)
+         n0: 13992 in 2 places, all below massif's threshold (1.00%)
+        n0: 15168 in 2 places, all below massif's threshold (1.00%)
+       n0: 17424 in 2 places, all below massif's threshold (1.00%)
+      n0: 19944 in 2 places, all below massif's threshold (1.00%)
+     n0: 23352 in 2 places, all below massif's threshold (1.00%)
+    n0: 59952 in 16 places, all below massif's threshold (1.00%)
+   n4: 250192 0xB051587: g_slice_alloc0 (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+    n1: 131584 0x166D8CDA: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+     n0: 131584 in 26 places, all below massif's threshold (1.00%)
+    n2: 53392 0x173DC7E4: g_type_create_instance (in /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.5400.1)
+     n1: 44488 0x173C35E1: g_param_spec_internal (in /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.5400.1)
+      n0: 44488 in 13 places, all below massif's threshold (1.00%)
+     n0: 8904 in 2 places, all below massif's threshold (1.00%)
+    n1: 50032 0x173DC6D3: g_type_create_instance (in /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.5400.1)
+     n2: 50032 0x173BD5E6: ??? (in /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.5400.1)
+      n1: 40016 0x173BED83: g_object_new_with_properties (in /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.5400.1)
+       n1: 40016 0x173BF7FF: g_object_new (in /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.5400.1)
+        n0: 40016 in 26 places, all below massif's threshold (1.00%)
+      n0: 10016 in 1 place, below massif's threshold (1.00%)
+    n0: 15184 in 42 places, all below massif's threshold (1.00%)
+   n0: 41168 in 33 places, all below massif's threshold (1.00%)
+  n0: 67009 in 73 places, all below massif's threshold (1.00%)
+  n1: 46562 0xB052AFD: g_strdup (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+   n0: 46562 in 117 places, all below massif's threshold (1.00%)
+ n4: 620916 0xB0395CF: g_malloc0 (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n2: 179584 0xB021956: ??? (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+   n1: 179456 0xB021BB9: ??? (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+    n2: 179456 0xB021F69: ??? (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+     n2: 145664 0x166C7F11: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+      n2: 143616 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+       n2: 141568 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+        n2: 139520 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+         n2: 137472 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+          n2: 135424 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+           n2: 133376 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+            n2: 131328 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+             n2: 129280 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+              n2: 127232 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+               n2: 125184 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                n2: 123136 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                 n2: 121088 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                  n2: 119040 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                   n2: 116992 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                    n2: 114944 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                     n2: 112896 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                      n2: 110848 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                       n2: 108800 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                        n2: 106752 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                         n2: 104704 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                          n2: 102656 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                           n2: 100608 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                            n2: 98560 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                             n2: 96512 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                              n0: 94464 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                              n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                             n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                            n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                           n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                          n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                         n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                        n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                       n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                     n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                    n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                   n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                  n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                 n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                n0: 2048 in 2 places, all below massif's threshold (1.00%)
+               n0: 2048 in 2 places, all below massif's threshold (1.00%)
+              n0: 2048 in 2 places, all below massif's threshold (1.00%)
+             n0: 2048 in 2 places, all below massif's threshold (1.00%)
+            n0: 2048 in 2 places, all below massif's threshold (1.00%)
+           n0: 2048 in 2 places, all below massif's threshold (1.00%)
+          n0: 2048 in 2 places, all below massif's threshold (1.00%)
+         n0: 2048 in 2 places, all below massif's threshold (1.00%)
+        n0: 2048 in 2 places, all below massif's threshold (1.00%)
+       n0: 2048 in 2 places, all below massif's threshold (1.00%)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+     n0: 33792 in 23 places, all below massif's threshold (1.00%)
+   n0: 128 in 1 place, below massif's threshold (1.00%)
+  n0: 178100 in 66 places, all below massif's threshold (1.00%)
+  n2: 173440 0xB021973: ??? (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+   n1: 173312 0xB021BB9: ??? (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+    n2: 173312 0xB021F69: ??? (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+     n2: 145664 0x166C7F11: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+      n2: 143616 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+       n2: 141568 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+        n2: 139520 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+         n2: 137472 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+          n2: 135424 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+           n2: 133376 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+            n2: 131328 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+             n2: 129280 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+              n2: 127232 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+               n2: 125184 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                n2: 123136 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                 n2: 121088 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                  n2: 119040 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                   n2: 116992 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                    n2: 114944 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                     n2: 112896 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                      n2: 110848 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                       n2: 108800 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                        n2: 106752 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                         n2: 104704 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                          n2: 102656 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                           n2: 100608 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                            n2: 98560 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                             n2: 96512 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                              n0: 94464 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                              n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                             n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                            n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                           n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                          n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                         n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                        n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                       n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                     n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                    n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                   n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                  n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                 n0: 2048 in 2 places, all below massif's threshold (1.00%)
+                n0: 2048 in 2 places, all below massif's threshold (1.00%)
+               n0: 2048 in 2 places, all below massif's threshold (1.00%)
+              n0: 2048 in 2 places, all below massif's threshold (1.00%)
+             n0: 2048 in 2 places, all below massif's threshold (1.00%)
+            n0: 2048 in 2 places, all below massif's threshold (1.00%)
+           n0: 2048 in 2 places, all below massif's threshold (1.00%)
+          n0: 2048 in 2 places, all below massif's threshold (1.00%)
+         n0: 2048 in 2 places, all below massif's threshold (1.00%)
+        n0: 2048 in 2 places, all below massif's threshold (1.00%)
+       n0: 2048 in 2 places, all below massif's threshold (1.00%)
+      n0: 2048 in 2 places, all below massif's threshold (1.00%)
+     n0: 27648 in 19 places, all below massif's threshold (1.00%)
+   n0: 128 in 1 place, below massif's threshold (1.00%)
+  n2: 89792 0xB021983: ??? (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+   n1: 89728 0xB021BB9: ??? (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+    n2: 89728 0xB021F69: ??? (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+     n2: 72832 0x166C7F11: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+      n2: 71808 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+       n2: 70784 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+        n2: 69760 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+         n2: 68736 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+          n2: 67712 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+           n2: 66688 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+            n2: 65664 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+             n2: 64640 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+              n2: 63616 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+               n2: 62592 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                n2: 61568 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                 n2: 60544 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                  n2: 59520 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                   n2: 58496 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                    n2: 57472 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                     n2: 56448 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                      n2: 55424 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                       n2: 54400 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                        n2: 53376 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                         n2: 52352 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                          n2: 51328 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                           n2: 50304 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                            n2: 49280 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                             n2: 48256 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                              n0: 47232 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                              n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                             n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                            n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                           n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                          n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                         n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                        n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                       n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                      n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                     n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                    n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                   n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                  n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                 n0: 1024 in 2 places, all below massif's threshold (1.00%)
+                n0: 1024 in 2 places, all below massif's threshold (1.00%)
+               n0: 1024 in 2 places, all below massif's threshold (1.00%)
+              n0: 1024 in 2 places, all below massif's threshold (1.00%)
+             n0: 1024 in 2 places, all below massif's threshold (1.00%)
+            n0: 1024 in 2 places, all below massif's threshold (1.00%)
+           n0: 1024 in 2 places, all below massif's threshold (1.00%)
+          n0: 1024 in 2 places, all below massif's threshold (1.00%)
+         n0: 1024 in 2 places, all below massif's threshold (1.00%)
+        n0: 1024 in 2 places, all below massif's threshold (1.00%)
+       n0: 1024 in 2 places, all below massif's threshold (1.00%)
+      n0: 1024 in 2 places, all below massif's threshold (1.00%)
+     n0: 16896 in 23 places, all below massif's threshold (1.00%)
+   n0: 64 in 1 place, below massif's threshold (1.00%)
+ n4: 518640 0xB03962E: g_realloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n2: 218368 0xB006B14: ??? (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+   n3: 201664 0xB006EA8: g_array_append_vals (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+    n2: 131072 0xB008107: g_byte_array_append (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+     n2: 131072 0x166C8046: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+      n2: 131072 0x166C81EC: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+       n2: 131072 0x166C81EC: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+        n2: 131072 0x166C81EC: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+         n2: 131072 0x166C81EC: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+          n1: 131072 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+           n1: 131072 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+            n1: 131072 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+             n1: 131072 0x166C8203: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+              n1: 131072 0x166C997E: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+               n1: 131072 0x166C50D7: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                n1: 131072 0x166C5CA2: gtk_css_provider_load_from_file (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                 n1: 131072 0x166C5D5F: gtk_css_provider_load_from_path (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                  n1: 131072 0x166C606A: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                   n1: 131072 0x16803C50: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                    n1: 131072 0x16807174: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+                     n1: 131072 0x162FA0BB: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqgtk3.so)
+                      n1: 131072 0x162FA322: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqgtk3.so)
+                       n1: 131072 0x5A7AA2F: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+                        n1: 131072 0x5294287: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                         n0: 131072 0x10B2E1: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+       n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n0: 0 in 2 places, all below massif's threshold (1.00%)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 65536 0x166C4F37: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+     n1: 65536 0x166C5173: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+      n1: 65536 0x166C5173: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+       n1: 65536 0x166C5CA2: gtk_css_provider_load_from_file (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+        n1: 65536 0x166C5D5F: gtk_css_provider_load_from_path (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+         n1: 65536 0x166C606A: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+          n1: 65536 0x16803C50: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+           n1: 65536 0x16807174: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+            n1: 65536 0x162FA0BB: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqgtk3.so)
+             n1: 65536 0x162FA322: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqgtk3.so)
+              n1: 65536 0x5A7AA2F: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+               n1: 65536 0x5294287: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                n0: 65536 0x10B2E1: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+    n0: 5056 in 9 places, all below massif's threshold (1.00%)
+   n0: 16704 in 3 places, all below massif's threshold (1.00%)
+  n2: 138152 0x166C79BA: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+   n2: 79408 0x166C8E91: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+    n1: 78104 0x166C91BC: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+     n1: 78104 0x166C46CA: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+      n1: 78104 0x166C5173: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+       n1: 78104 0x166C5173: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+        n1: 78104 0x166C5CA2: gtk_css_provider_load_from_file (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+         n1: 78104 0x166C5D5F: gtk_css_provider_load_from_path (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+          n1: 78104 0x166C606A: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+           n1: 78104 0x16803C50: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+            n1: 78104 0x16807174: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+             n1: 78104 0x162FA0BB: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqgtk3.so)
+              n1: 78104 0x162FA322: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqgtk3.so)
+               n1: 78104 0x5A7AA2F: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+                n1: 78104 0x5294287: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                 n0: 78104 0x10B2E1: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+    n0: 1304 in 1 place, below massif's threshold (1.00%)
+   n0: 58744 in 10 places, all below massif's threshold (1.00%)
+  n0: 82752 in 38 places, all below massif's threshold (1.00%)
+  n2: 79368 0x166C432D: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+   n1: 41688 0x166C4E97: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+    n1: 41688 0x166C5173: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+     n1: 41688 0x166C5173: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+      n1: 41688 0x166C5CA2: gtk_css_provider_load_from_file (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+       n1: 41688 0x166C5D5F: gtk_css_provider_load_from_path (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+        n1: 41688 0x166C606A: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+         n1: 41688 0x16803C50: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+          n1: 41688 0x16807174: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+           n1: 41688 0x162FA0BB: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqgtk3.so)
+            n1: 41688 0x162FA322: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqgtk3.so)
+             n1: 41688 0x5A7AA2F: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+              n1: 41688 0x5294287: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+               n0: 41688 0x10B2E1: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+   n1: 37680 0x166C4E47: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+    n1: 37680 0x166C5173: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+     n1: 37680 0x166C5173: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+      n1: 37680 0x166C5CA2: gtk_css_provider_load_from_file (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+       n1: 37680 0x166C5D5F: gtk_css_provider_load_from_path (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+        n1: 37680 0x166C606A: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+         n1: 37680 0x16803C50: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+          n1: 37680 0x16807174: ??? (in /usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2200.24)
+           n1: 37680 0x162FA0BB: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqgtk3.so)
+            n1: 37680 0x162FA322: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/platformthemes/libqgtk3.so)
+             n1: 37680 0x5A7AA2F: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+              n1: 37680 0x5294287: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+               n0: 37680 0x10B2E1: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+ n0: 387912 in 489 places, all below massif's threshold (1.00%)
+ n1: 72704 0x68BB304: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.24)
+  n1: 72704 0x4010A68: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x4010B79: _dl_init (dl-init.c:30)
+    n1: 72704 0x4000ED8: ??? (in /lib/x86_64-linux-gnu/ld-2.26.so)
+     n1: 72704 0x0: ???
+      n1: 72704 0x1FFF000411: ???
+       n0: 72704 0x1FFF000419: ???
+ n1: 67960 0x400C054: _dl_new_object (dl-object.c:75)
+  n1: 67960 0x40068C3: _dl_map_object_from_fd (dl-load.c:1006)
+   n2: 67960 0x4008F13: _dl_map_object (dl-load.c:2436)
+    n1: 59300 0x400E20E: openaux (dl-deps.c:63)
+     n1: 59300 0x6F24D62: _dl_catch_error (dl-error-skeleton.c:198)
+      n1: 59300 0x400E829: _dl_map_object_deps (dl-deps.c:254)
+       n1: 59300 0x4015934: dl_open_worker (dl-open.c:280)
+        n1: 59300 0x6F24D62: _dl_catch_error (dl-error-skeleton.c:198)
+         n1: 59300 0x40150D7: _dl_open (dl-open.c:660)
+          n1: 59300 0x780AFF4: dlopen_doit (dlopen.c:66)
+           n1: 59300 0x6F24D62: _dl_catch_error (dl-error-skeleton.c:198)
+            n1: 59300 0x780B757: _dlerror_run (dlerror.c:163)
+             n2: 59300 0x780B090: dlopen@@GLIBC_2.2.5 (dlopen.c:87)
+              n1: 58115 0x636B71A: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.1)
+               n1: 58115 0x6364B43: ??? (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.1)
+                n2: 58115 0x6355066: QFactoryLoader::instance(int) const (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.1)
+                 n1: 35588 0x5A6AC21: QPlatformThemeFactory::create(QString const&, QString const&) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+                  n1: 35588 0x5A78446: QGuiApplicationPrivate::createPlatformIntegration() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+                   n1: 35588 0x5A78E3B: QGuiApplicationPrivate::createEventDispatcher() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+                    n1: 35588 0x6376B83: QCoreApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.1)
+                     n1: 35588 0x5A7A8CD: QGuiApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+                      n1: 35588 0x5294287: QApplicationPrivate::init() (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                       n0: 35588 0x10B2E1: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+                 n0: 22527 in 1 place, below massif's threshold (1.00%)
+              n0: 1185 in 1 place, below massif's threshold (1.00%)
+    n0: 8660 in 1 place, below massif's threshold (1.00%)
+ n1: 52809 0x61939F0: QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.1)
+  n0: 52809 in 31 places, all below massif's threshold (1.00%)
+ n1: 43280 0x61FD97F: QMapDataBase::createNode(int, int, QMapNodeBase*, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.1)
+  n0: 43280 in 6 places, all below massif's threshold (1.00%)
+ n1: 34512 0x173DC843: g_type_create_instance (in /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.5400.1)
+  n0: 34512 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=245878023
+mem_heap_B=2610351
+mem_heap_extra_B=265721
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=276428317
+mem_heap_B=2761983
+mem_heap_extra_B=265753
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=327281152
+mem_heap_B=21557920
+mem_heap_extra_B=355632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=385338065
+mem_heap_B=30446863
+mem_heap_extra_B=688017
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=423455330
+mem_heap_B=31020576
+mem_heap_extra_B=727832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=478333974
+mem_heap_B=31422830
+mem_heap_extra_B=880218
+mem_stacks_B=0
+heap_tree=detailed
+n8: 31422830 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 17580048 0x1E7195A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 17580048 0x1E900BD0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 17580048 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 17580048 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+     n1: 17580048 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 17580048 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n2: 17580048 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 17580048 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+         n2: 17580048 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+          n1: 17580048 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+           n1: 17580048 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+            n0: 17580048 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 6020527 0x1E80BAFB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 5779944 0x1E80BBC7: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 4354632 in 1371 places, all below massif's threshold (1.00%)
+   n2: 997696 0x1E80CC4D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 562976 0x1EA35AAF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 562976 0x1EA3651C: brw_fs_alloc_reg_sets (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 562976 0x1E9E618F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 562976 0x1E92E5D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 562976 0x1E8C5AFE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 562976 0x9CB4455: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 562976 0x9C88714: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 562976 0x9C83EA2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 562976 0x9C84D73: glXChooseVisual (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 562976 0x4EDE857: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 562976 0x4EDEB39: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 562976 0x4ECF044: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n1: 562976 0x4ED11E2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                 n1: 562976 0x4ED1979: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                  n1: 562976 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                   n0: 562976 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+    n1: 434720 0x1EA8E5D0: brw_vec4_alloc_reg_set (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 434720 0x1E9E6197: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 434720 0x1E92E5D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 434720 0x1E8C5AFE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 434720 0x9CB4455: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 434720 0x9C88714: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 434720 0x9C83EA2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 434720 0x9C84D73: glXChooseVisual (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 434720 0x4EDE857: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n1: 434720 0x4EDEB39: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 434720 0x4ECF044: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 434720 0x4ED11E2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n1: 434720 0x4ED1979: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                 n1: 434720 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                  n0: 434720 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+   n1: 427616 0x1E7941D8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n0: 427616 in 129 places, all below massif's threshold (1.00%)
+  n0: 240583 in 158 places, all below massif's threshold (1.00%)
+ n1: 3060192 0x1E650071: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 3060192 0x1E70AA02: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3060192 0x1E747656: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3060192 0x1E900C03: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3060192 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3060192 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 3060192 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 3060192 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n2: 3060192 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 3060192 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+           n2: 3060192 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+            n1: 3060192 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n1: 3060192 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n0: 3060192 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 2182697 in 971 places, all below massif's threshold (1.00%)
+ n2: 1368682 0x1E65001D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0x1E6BE59D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0x1E70932B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0x1E6F8418: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0x1E6F6DEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0x1E900BEA: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 387712 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n2: 387712 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n2: 387712 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 387712 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 387712 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n0: 387712 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0x1E70982C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0x1E6F8418: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0x1E6F6DEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0x1E900BEA: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 387712 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n2: 387712 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n2: 387712 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 387712 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 387712 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n0: 387712 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 11690 in 5 places, all below massif's threshold (1.00%)
+ n1: 472368 0x7ED57AA: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 472368 0x7ED3B39: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+   n1: 472368 0x7ED1FFF: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 472368 0x4ED9FA7: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+     n1: 472368 0x4EE0A7A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+      n1: 472368 0x4ED175D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+       n1: 472368 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+        n0: 472368 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+ n1: 393140 0xB039577: g_malloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n0: 393140 in 75 places, all below massif's threshold (1.00%)
+ n1: 345176 0xB03962E: g_realloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n0: 345176 in 42 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=520479101
+mem_heap_B=31667954
+mem_heap_extra_B=872806
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=571798399
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=613549413
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=661277701
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=699051645
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=738825205
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=798472140
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=838243903
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=887961176
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=937664730
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=967491065
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=997322596
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1037082472
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1086797285
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1146444645
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=1192186235
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1223989646
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1255809740
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=detailed
+n8: 31668090 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 17580048 0x1E7195A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 17580048 0x1E900BD0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 17580048 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 17580048 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+     n1: 17580048 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 17580048 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n2: 17580048 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 17580048 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+         n2: 17580048 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+          n1: 17580048 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+           n1: 17580048 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+            n0: 17580048 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 6020527 0x1E80BAFB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 5779944 0x1E80BBC7: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 4354632 in 1371 places, all below massif's threshold (1.00%)
+   n2: 997696 0x1E80CC4D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 562976 0x1EA35AAF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 562976 0x1EA3651C: brw_fs_alloc_reg_sets (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 562976 0x1E9E618F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 562976 0x1E92E5D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 562976 0x1E8C5AFE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 562976 0x9CB4455: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 562976 0x9C88714: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 562976 0x9C83EA2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 562976 0x9C84D73: glXChooseVisual (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 562976 0x4EDE857: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 562976 0x4EDEB39: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 562976 0x4ECF044: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n1: 562976 0x4ED11E2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                 n1: 562976 0x4ED1979: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                  n1: 562976 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                   n0: 562976 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+    n1: 434720 0x1EA8E5D0: brw_vec4_alloc_reg_set (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 434720 0x1E9E6197: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 434720 0x1E92E5D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 434720 0x1E8C5AFE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 434720 0x9CB4455: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 434720 0x9C88714: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 434720 0x9C83EA2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 434720 0x9C84D73: glXChooseVisual (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 434720 0x4EDE857: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n1: 434720 0x4EDEB39: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 434720 0x4ECF044: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 434720 0x4ED11E2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n1: 434720 0x4ED1979: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                 n1: 434720 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                  n0: 434720 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+   n1: 427616 0x1E7941D8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n0: 427616 in 129 places, all below massif's threshold (1.00%)
+  n0: 240583 in 158 places, all below massif's threshold (1.00%)
+ n1: 3060192 0x1E650071: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 3060192 0x1E70AA02: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3060192 0x1E747656: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3060192 0x1E900C03: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3060192 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3060192 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 3060192 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 3060192 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n2: 3060192 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 3060192 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+           n2: 3060192 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+            n1: 3060192 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n1: 3060192 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n0: 3060192 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 2427957 in 1012 places, all below massif's threshold (1.00%)
+ n2: 1368682 0x1E65001D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0x1E6BE59D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0x1E70932B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0x1E6F8418: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0x1E6F6DEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0x1E900BEA: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 387712 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n2: 387712 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n2: 387712 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 387712 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 387712 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n0: 387712 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0x1E70982C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0x1E6F8418: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0x1E6F6DEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0x1E900BEA: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 387712 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n2: 387712 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n2: 387712 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 387712 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 387712 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n0: 387712 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 11690 in 5 places, all below massif's threshold (1.00%)
+ n1: 472368 0x7ED57AA: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 472368 0x7ED3B39: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+   n1: 472368 0x7ED1FFF: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 472368 0x4ED9FA7: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+     n1: 472368 0x4EE0A7A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+      n1: 472368 0x4ED175D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+       n1: 472368 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+        n0: 472368 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+ n1: 393140 0xB039577: g_malloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n0: 393140 in 75 places, all below massif's threshold (1.00%)
+ n1: 345176 0xB03962E: g_realloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n0: 345176 in 42 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=1287625518
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=1335339730
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=1367159552
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=1398974634
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=1446691730
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1478509476
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1510326187
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1558045676
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1589859855
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1621681975
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1653484519
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1685305455
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1717119828
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=1764834983
+mem_heap_B=31668090
+mem_heap_extra_B=872822
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=1805990879
+mem_heap_B=31789754
+mem_heap_extra_B=880206
+mem_stacks_B=0
+heap_tree=detailed
+n8: 31789754 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 17580048 0x1E7195A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 17580048 0x1E900BD0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 17580048 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 17580048 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+     n1: 17580048 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 17580048 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n2: 17580048 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 17580048 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+         n2: 17580048 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+          n1: 17580048 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+           n1: 17580048 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+            n0: 17580048 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 6020527 0x1E80BAFB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 5779944 0x1E80BBC7: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 4354632 in 1371 places, all below massif's threshold (1.00%)
+   n2: 997696 0x1E80CC4D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 562976 0x1EA35AAF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 562976 0x1EA3651C: brw_fs_alloc_reg_sets (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 562976 0x1E9E618F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 562976 0x1E92E5D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 562976 0x1E8C5AFE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 562976 0x9CB4455: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 562976 0x9C88714: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 562976 0x9C83EA2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 562976 0x9C84D73: glXChooseVisual (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 562976 0x4EDE857: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 562976 0x4EDEB39: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 562976 0x4ECF044: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n1: 562976 0x4ED11E2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                 n1: 562976 0x4ED1979: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                  n1: 562976 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                   n0: 562976 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+    n1: 434720 0x1EA8E5D0: brw_vec4_alloc_reg_set (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 434720 0x1E9E6197: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 434720 0x1E92E5D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 434720 0x1E8C5AFE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 434720 0x9CB4455: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 434720 0x9C88714: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 434720 0x9C83EA2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 434720 0x9C84D73: glXChooseVisual (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 434720 0x4EDE857: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n1: 434720 0x4EDEB39: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 434720 0x4ECF044: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 434720 0x4ED11E2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n1: 434720 0x4ED1979: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                 n1: 434720 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                  n0: 434720 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+   n1: 427616 0x1E7941D8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n0: 427616 in 129 places, all below massif's threshold (1.00%)
+  n0: 240583 in 158 places, all below massif's threshold (1.00%)
+ n1: 3060192 0x1E650071: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 3060192 0x1E70AA02: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3060192 0x1E747656: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3060192 0x1E900C03: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3060192 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3060192 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 3060192 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 3060192 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n2: 3060192 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 3060192 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+           n2: 3060192 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+            n1: 3060192 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n1: 3060192 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n0: 3060192 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 2549621 in 1025 places, all below massif's threshold (1.00%)
+ n2: 1368682 0x1E65001D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0x1E6BE59D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0x1E70932B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0x1E6F8418: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0x1E6F6DEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0x1E900BEA: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 387712 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n2: 387712 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n2: 387712 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 387712 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 387712 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n0: 387712 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0x1E70982C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0x1E6F8418: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0x1E6F6DEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0x1E900BEA: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 387712 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n2: 387712 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n2: 387712 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 387712 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 387712 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n0: 387712 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 11690 in 5 places, all below massif's threshold (1.00%)
+ n1: 472368 0x7ED57AA: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 472368 0x7ED3B39: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+   n1: 472368 0x7ED1FFF: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 472368 0x4ED9FA7: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+     n1: 472368 0x4EE0A7A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+      n1: 472368 0x4ED175D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+       n1: 472368 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+        n0: 472368 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+ n1: 393140 0xB039577: g_malloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n0: 393140 in 75 places, all below massif's threshold (1.00%)
+ n1: 345176 0xB03962E: g_realloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n0: 345176 in 42 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=1848573421
+mem_heap_B=32912177
+mem_heap_extra_B=955575
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1880203483
+mem_heap_B=33119594
+mem_heap_extra_B=959190
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=1938924367
+mem_heap_B=33264661
+mem_heap_extra_B=969867
+mem_stacks_B=0
+heap_tree=detailed
+n8: 33264661 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 17580048 0x1E7195A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 17580048 0x1E900BD0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 17580048 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 17580048 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+     n1: 17580048 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 17580048 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n2: 17580048 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 17580048 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+         n2: 17580048 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+          n1: 17580048 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+           n1: 17580048 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+            n0: 17580048 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 7126775 0x1E80BAFB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 6878480 0x1E80BBC7: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 4455472 in 1371 places, all below massif's threshold (1.00%)
+   n2: 1995392 0x1E80CC4D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 1125952 0x1EA35AAF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 1125952 0x1EA3651C: brw_fs_alloc_reg_sets (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 1125952 0x1E9E618F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 1125952 0x1E92E5D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 1125952 0x1E8C5AFE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 1125952 0x9CB4455: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n2: 1125952 0x9C88714: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 562976 0x9C83EA2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 562976 0x9C84D73: glXChooseVisual (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 562976 0x4EDE857: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 562976 0x4EDEB39: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 562976 0x4ECF044: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n1: 562976 0x4ED11E2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                 n1: 562976 0x4ED1979: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                  n1: 562976 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                   n0: 562976 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+           n1: 562976 0x9C844A0: glXGetFBConfigs (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 562976 0x9C85770: glXChooseFBConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 562976 0x160DDE71: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+              n1: 562976 0x160DE1EB: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+               n1: 562976 0x160DA2FE: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+                n1: 562976 0x130C62E4: QXcbWindow::create() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.9.1)
+                 n1: 562976 0x130B2669: QXcbIntegration::createPlatformWindow(QWindow*) const (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.9.1)
+                  n1: 562976 0x5A88C5C: QWindowPrivate::create(bool, unsigned long long) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+                   n1: 562976 0x52C2903: QWidgetPrivate::create_sys(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                    n1: 562976 0x52C2FBB: QWidget::create(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                     n1: 562976 0x52CF824: QWidget::setVisible(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                      n1: 562976 0x10F507: CPU::openWindow() (in /home/hunter/Projects/emulators/qversion/Chip8)
+                       n0: 562976 0x10B4EA: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+    n1: 869440 0x1EA8E5D0: brw_vec4_alloc_reg_set (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 869440 0x1E9E6197: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 869440 0x1E92E5D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 869440 0x1E8C5AFE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 869440 0x9CB4455: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n2: 869440 0x9C88714: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 434720 0x9C83EA2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 434720 0x9C84D73: glXChooseVisual (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 434720 0x4EDE857: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n1: 434720 0x4EDEB39: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 434720 0x4ECF044: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 434720 0x4ED11E2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n1: 434720 0x4ED1979: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                 n1: 434720 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                  n0: 434720 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+          n1: 434720 0x9C844A0: glXGetFBConfigs (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 434720 0x9C85770: glXChooseFBConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 434720 0x160DDE71: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+             n1: 434720 0x160DE1EB: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+              n1: 434720 0x160DA2FE: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+               n1: 434720 0x130C62E4: QXcbWindow::create() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.9.1)
+                n1: 434720 0x130B2669: QXcbIntegration::createPlatformWindow(QWindow*) const (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.9.1)
+                 n1: 434720 0x5A88C5C: QWindowPrivate::create(bool, unsigned long long) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+                  n1: 434720 0x52C2903: QWidgetPrivate::create_sys(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                   n1: 434720 0x52C2FBB: QWidget::create(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                    n1: 434720 0x52CF824: QWidget::setVisible(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                     n1: 434720 0x10F507: CPU::openWindow() (in /home/hunter/Projects/emulators/qversion/Chip8)
+                      n0: 434720 0x10B4EA: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+   n1: 427616 0x1E7941D8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n0: 427616 in 129 places, all below massif's threshold (1.00%)
+  n0: 248295 in 158 places, all below massif's threshold (1.00%)
+ n1: 3060192 0x1E650071: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 3060192 0x1E70AA02: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3060192 0x1E747656: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3060192 0x1E900C03: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3060192 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3060192 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 3060192 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 3060192 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n2: 3060192 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 3060192 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+           n2: 3060192 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+            n1: 3060192 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n1: 3060192 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n0: 3060192 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 2918713 in 1128 places, all below massif's threshold (1.00%)
+ n2: 1368682 0x1E65001D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0x1E6BE59D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0x1E70932B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0x1E6F8418: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0x1E6F6DEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0x1E900BEA: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 387712 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n2: 387712 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n2: 387712 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 387712 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 387712 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n0: 387712 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0x1E70982C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0x1E6F8418: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0x1E6F6DEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0x1E900BEA: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 387712 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n2: 387712 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n2: 387712 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 387712 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 387712 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n0: 387712 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 11690 in 5 places, all below massif's threshold (1.00%)
+ n1: 472368 0x7ED57AA: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 472368 0x7ED3B39: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+   n1: 472368 0x7ED1FFF: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 472368 0x4ED9FA7: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+     n1: 472368 0x4EE0A7A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+      n1: 472368 0x4ED175D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+       n1: 472368 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+        n0: 472368 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+ n1: 392579 0xB039577: g_malloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n0: 392579 in 75 places, all below massif's threshold (1.00%)
+ n1: 345304 0xB03962E: g_realloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n0: 345304 in 42 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=1954738719
+mem_heap_B=33334072
+mem_heap_extra_B=977048
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=1960600929
+mem_heap_B=33532599
+mem_heap_extra_B=1044377
+mem_stacks_B=0
+heap_tree=peak
+n7: 33532599 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 17580048 0x1E7195A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 17580048 0x1E900BD0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 17580048 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 17580048 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+     n1: 17580048 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+      n1: 17580048 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n2: 17580048 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 17580048 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+         n2: 17580048 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+          n1: 17580048 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+           n1: 17580048 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+            n0: 17580048 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 7126775 0x1E80BAFB: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 6878480 0x1E80BBC7: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 4455472 in 1371 places, all below massif's threshold (1.00%)
+   n2: 1995392 0x1E80CC4D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 1125952 0x1EA35AAF: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 1125952 0x1EA3651C: brw_fs_alloc_reg_sets (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 1125952 0x1E9E618F: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 1125952 0x1E92E5D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 1125952 0x1E8C5AFE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+         n1: 1125952 0x9CB4455: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n2: 1125952 0x9C88714: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 562976 0x9C83EA2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 562976 0x9C84D73: glXChooseVisual (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 562976 0x4EDE857: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 562976 0x4EDEB39: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 562976 0x4ECF044: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n1: 562976 0x4ED11E2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                 n1: 562976 0x4ED1979: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                  n1: 562976 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                   n0: 562976 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+           n1: 562976 0x9C844A0: glXGetFBConfigs (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 562976 0x9C85770: glXChooseFBConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+             n1: 562976 0x160DDE71: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+              n1: 562976 0x160DE1EB: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+               n1: 562976 0x160DA2FE: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+                n1: 562976 0x130C62E4: QXcbWindow::create() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.9.1)
+                 n1: 562976 0x130B2669: QXcbIntegration::createPlatformWindow(QWindow*) const (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.9.1)
+                  n1: 562976 0x5A88C5C: QWindowPrivate::create(bool, unsigned long long) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+                   n1: 562976 0x52C2903: QWidgetPrivate::create_sys(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                    n1: 562976 0x52C2FBB: QWidget::create(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                     n1: 562976 0x52CF824: QWidget::setVisible(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                      n1: 562976 0x10F507: CPU::openWindow() (in /home/hunter/Projects/emulators/qversion/Chip8)
+                       n0: 562976 0x10B4EA: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+    n1: 869440 0x1EA8E5D0: brw_vec4_alloc_reg_set (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 869440 0x1E9E6197: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 869440 0x1E92E5D0: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 869440 0x1E8C5AFE: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 869440 0x9CB4455: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n2: 869440 0x9C88714: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 434720 0x9C83EA2: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 434720 0x9C84D73: glXChooseVisual (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 434720 0x4EDE857: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n1: 434720 0x4EDEB39: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 434720 0x4ECF044: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 434720 0x4ED11E2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n1: 434720 0x4ED1979: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                 n1: 434720 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                  n0: 434720 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+          n1: 434720 0x9C844A0: glXGetFBConfigs (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n1: 434720 0x9C85770: glXChooseFBConfig (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 434720 0x160DDE71: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+             n1: 434720 0x160DE1EB: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+              n1: 434720 0x160DA2FE: ??? (in /usr/lib/x86_64-linux-gnu/qt5/plugins/xcbglintegrations/libqxcb-glx-integration.so)
+               n1: 434720 0x130C62E4: QXcbWindow::create() (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.9.1)
+                n1: 434720 0x130B2669: QXcbIntegration::createPlatformWindow(QWindow*) const (in /usr/lib/x86_64-linux-gnu/libQt5XcbQpa.so.5.9.1)
+                 n1: 434720 0x5A88C5C: QWindowPrivate::create(bool, unsigned long long) (in /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.1)
+                  n1: 434720 0x52C2903: QWidgetPrivate::create_sys(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                   n1: 434720 0x52C2FBB: QWidget::create(unsigned long long, bool, bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                    n1: 434720 0x52CF824: QWidget::setVisible(bool) (in /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.1)
+                     n1: 434720 0x10F507: CPU::openWindow() (in /home/hunter/Projects/emulators/qversion/Chip8)
+                      n0: 434720 0x10B4EA: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+   n1: 427616 0x1E7941D8: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n0: 427616 in 129 places, all below massif's threshold (1.00%)
+  n0: 248295 in 158 places, all below massif's threshold (1.00%)
+ n0: 3533194 in 1137 places, all below massif's threshold (1.00%)
+ n1: 3060192 0x1E650071: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n1: 3060192 0x1E70AA02: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n1: 3060192 0x1E747656: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 3060192 0x1E900C03: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 3060192 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 3060192 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+       n1: 3060192 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+        n1: 3060192 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n2: 3060192 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 3060192 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+           n2: 3060192 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+            n1: 3060192 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n1: 3060192 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n0: 3060192 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 1368682 0x1E65001D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+  n3: 1356992 0x1E6BE59D: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+   n0: 581568 in 12 places, all below massif's threshold (1.00%)
+   n1: 387712 0x1E70932B: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0x1E6F8418: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0x1E6F6DEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0x1E900BEA: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 387712 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n2: 387712 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n2: 387712 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 387712 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 387712 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n0: 387712 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 387712 0x1E70982C: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+    n1: 387712 0x1E6F8418: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+     n1: 387712 0x1E6F6DEC: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+      n1: 387712 0x1E900BEA: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+       n1: 387712 0x1E8C56B5: ??? (in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so)
+        n1: 387712 0x9CB3FAC: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+         n1: 387712 0x9CB4051: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+          n1: 387712 0x9C840A9: ??? (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+           n2: 387712 0x9C84378: glXCreateContext (in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0)
+            n1: 387712 0x4EDF337: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+             n2: 387712 0x4ECFF1E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+              n1: 387712 0x4E7AC91: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+               n1: 387712 0x4E73BFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+                n0: 387712 0x10B31B: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+  n0: 11690 in 5 places, all below massif's threshold (1.00%)
+ n1: 472368 0x7ED57AA: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+  n1: 472368 0x7ED3B39: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+   n1: 472368 0x7ED1FFF: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0)
+    n1: 472368 0x4ED9FA7: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+     n1: 472368 0x4EE0A7A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+      n1: 472368 0x4ED175D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+       n1: 472368 0x4E4F5C5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.6.0)
+        n0: 472368 0x10B2EB: main (in /home/hunter/Projects/emulators/qversion/Chip8)
+ n1: 391340 0xB039577: g_malloc (in /lib/x86_64-linux-gnu/libglib-2.0.so.0.5400.1)
+  n0: 391340 in 75 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=1984969644
+mem_heap_B=33333206
+mem_heap_extra_B=970786
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=2010816216
+mem_heap_B=33333206
+mem_heap_extra_B=970786
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=2036663913
+mem_heap_B=33333206
+mem_heap_extra_B=970786
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=2062514801
+mem_heap_B=33333206
+mem_heap_extra_B=970786
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=2088369578
+mem_heap_B=33333206
+mem_heap_extra_B=970786
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=2114210530
+mem_heap_B=33333206
+mem_heap_extra_B=970786
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=2140060075
+mem_heap_B=33333206
+mem_heap_extra_B=970786
+mem_stacks_B=0
+heap_tree=empty

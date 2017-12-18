@@ -1,0 +1,33 @@
+       OpcodeLabel = new QLabel("INSTRUCTION", &debugWindow);
+       OpcodeLabel->setFont(QFont("Sans Serif", 28, 20));
+       currentOpcode = new QTextEdit("0x0000", &debugWindow);
+       currentOpcode->setFont(QFont("Courier", 16, 2));
+       RegisterLabel = new QLabel("REGISTERS", &debugWindow);
+       RegisterLabel->setFont(QFont("Sans Serif", 28, 20));
+    
+       
+       OpcodeLabel->setGeometry(debugWindow.width()/2, 100, debugWindow.width()/2, 75);
+       OpcodeLabel->setAlignment(Qt::AlignCenter);
+       currentOpcode->setGeometry(OpcodeLabel->x(), OpcodeLabel->y() + OpcodeLabel->height(), OpcodeLabel->width(), 75);
+
+       currentOpcode->setAlignment(Qt::AlignCenter);
+
+       RegisterLabel->setGeometry(registerLabels[0]->x(), registerLabels[0]->y()-30, debugWindow.width()/2, RegisterLabel->height()); 
+       registerLabels[0]->setText("0:");
+       
+       registerLabels[1]->setText("1:");
+       registerLabels[2]->setText("2:");
+       registerLabels[3]->setText("3:");
+       registerLabels[4]->setText("4:");
+       registerLabels[5]->setText("5:");
+       registerLabels[6]->setText("6:");
+       registerLabels[7]->setText("7:");
+       registerLabels[8]->setText("8:");
+       registerLabels[9]->setText("9:");
+       registerLabels[0xA]->setText("A:");
+       registerLabels[0xB]->setText("B:");
+       registerLabels[0xC]->setText("C:");
+       registerLabels[0xD]->setText("D:");
+       registerLabels[0xE]->setText("E:");
+       registerLabels[0xF]->setText("F:");
+       registerLabels[16]->setText("I:"); 
