@@ -6,7 +6,7 @@
 #include <queue> 
 #include <memory>
 
-#define IPS 180          //instructions per second
+#define IPS 300          //instructions per second
 #define SPI (float)1/IPS       //seconds per instruction
 #define HEIGHT 320
 
