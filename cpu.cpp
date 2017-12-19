@@ -291,12 +291,11 @@ void CPU::ClearScreen(){
 
 void CPU::cycle(){
     
-    
-    bool PCmoved = false;
-    
     opcode = memory[PC] << 8;    //grab first byte of instruction
 
     opcode += memory[PC+1];  //shift over byte and add second byte of instruction
+    PC +=2;
+
     switch(opcode & 0xF000){    //check most significant nibble
         case 0x0000:    //most significant nibble is zero
             
@@ -307,45 +306,39 @@ void CPU::cycle(){
                 case 0x00EE:        //00EE return from subroutine
                     PC = stack[stackPointer];
                     stackPointer--;
-                    PCmoved = true;
                     break;
             }
             break;
         case 0x1000: // 1nnn - jump to nnn
             PC = opcode & 0x0FFF;
-            PCmoved = true;
             break;
         case 0x2000:
             stackPointer++;
-            stack[stackPointer] = PC+2;
+            stack[stackPointer] = PC;
             PC = opcode & 0x0FFF;
-            PCmoved = true;
             break;
         case 0x3000:
-            if(registers[(opcode & 0x0F00) >> 8] == (int)(opcode & 0x00FF)){
-                PC +=4;
-                PCmoved = true;
+            if(registers[(opcode & 0x0F00) >> 8] == (opcode & 0x00FF)){
+                PC +=2;
             }
             break;
         case 0x4000:
-            if(registers[(opcode & 0x0F00) >> 8] != (int)(opcode & 0x00FF)){
-               PC +=4;
-               PCmoved = true;
+            if(registers[(opcode & 0x0F00) >> 8] != (opcode & 0x00FF)){
+               PC +=2;
             }
             break;
 
         case 0x5000:
             if(registers[(opcode & 0x0F00) >> 8] == registers[(opcode & 0x00F0) >> 4]){
-                PC += 4;
-                PCmoved = true;
+                PC += 2;
             }
             break;
         case 0x6000:
-            registers[(opcode & 0x0F00) >> 8] = ((opcode & 0x00FF));
+            registers[(opcode & 0x0F00) >> 8] = (opcode & 0x00FF);
             break;
 
         case 0x7000:
-            registers[(opcode & 0x0F00) >> 8] += ((opcode & 0x00FF));
+            registers[(opcode & 0x0F00) >> 8] += (opcode & 0x00FF);
             break;
         case 0x8000:
 
@@ -368,7 +361,7 @@ void CPU::cycle(){
                     }else{
                         registers[0xF] = 0;
                     }
-                    registers[(opcode & 0x0F00) >> 8]= registers[(opcode & 0x0F00) >> 8] + registers[(opcode & 0x00F0) >> 4];
+                    registers[(opcode & 0x0F00) >> 8]= (registers[(opcode & 0x0F00) >> 8] + registers[(opcode & 0x00F0) >> 4]) % 256; //added modulus to ensure proper carry behavior
                     break;
                 case 0x8005:
                     if(registers[(opcode & 0x0F00) >> 8] > registers[(opcode & 0x00F0) >> 4]){
@@ -384,7 +377,7 @@ void CPU::cycle(){
                     }else{
                         registers[0xF] = 0;
                     }
-                    registers[(opcode & 0x0F00) >> 8] /= 2;
+                    registers[(opcode & 0x0F00) >> 8] >>= 1;
                     break;
                 case 0x8007:
                     if(registers[(opcode & 0x00F0) >> 4] > registers[(opcode & 0x0F00) >> 8]){
@@ -395,27 +388,25 @@ void CPU::cycle(){
                     registers[(opcode & 0x0F00)>>8] = registers[(opcode & 0x00F0) >> 4] - registers[(opcode & 0x0F00) >> 8];
                     break;
                 case 0x800E:
-                    if(registers[(opcode & 0x0F00)>>8] % 2 == 1){
+                    if(registers[(opcode & 0x0F00)>>8] & 0x80){
                         registers[0xF] = 1;
                     }else{
                         registers[0xF] = 0;
                     }
-                    registers[(opcode & 0x0F00) >> 8] *= 2;
+                    registers[(opcode & 0x0F00) >> 8] <<= 1;
                     break;
             }
             break;
         case 0x9000:
             if(registers[(opcode & 0x0F00) >> 8] != registers[(opcode & 0x00F0) >> 4]){
-                PC += 4;
-                PCmoved = true;
+                PC += 2;
             }
             break;
         case 0xA000:
             registerI = (opcode & 0x0FFF);
             break;
         case 0xB000:
-            PC = ((opcode & 0x0FFF) + registers[0x0]);
-            PCmoved = true;
+            PC = ((opcode & 0x0FFF) + registers[0]);
             break;
         case 0xC000:
             registers[(opcode & 0x0F00) >> 8] = rand()%256 & (opcode & 0x00FF);
@@ -427,14 +418,12 @@ void CPU::cycle(){
             switch(opcode & 0xF00F){
                 case 0xE00E:
                     if(wasPressed(registers[(opcode & 0x0F00) >> 8])){
-                        PC+=4;
-                        PCmoved = true;
+                        PC+=2;
                     }
                     break;
                 case 0xE001:
                     if(!wasPressed(registers[(opcode & 0x0F00) >> 8])){
-                        PC += 4;
-                        PCmoved = true;
+                        PC += 2;
                     }
                     break;
 
@@ -468,16 +457,18 @@ void CPU::cycle(){
                     std::cout << "BCD: (" << static_cast<int>(memory[registerI]) << ", " << static_cast<int>(memory[registerI + 1]) << ", " << static_cast<int>(memory[registerI + 2]) << ")" << std::endl;
                     break;
                 case 0xF055:
-                    for(int i = 0; i < ((opcode & 0x0F00)>>8)+1 ; i++){ //+1 to i
+                    for(int i = 0; i < ((opcode & 0x0F00)>>8) ; i++){ //+1 to i
                         memory[registerI] = registers[i];
                         registerI++;
                     }
+                    registerI++;
                     break;
                 case 0xF065:
-                    for(int i = 0; i < ((opcode & 0x0F00)>>8)+1 ; i++){//+1 to i
+                    for(int i = 0; i < ((opcode & 0x0F00)>>8) ; i++){//+1 to i
                         registers[i] = memory[registerI];
                         registerI++;             
                     }
+                    registerI++;
                     break;
 
             }
@@ -485,9 +476,7 @@ void CPU::cycle(){
             break;
     }
 
-    if(!PCmoved){
-        PC+=2;
-    }
+  
 
     if(delayTimer > 0)
         delayTimer--;
