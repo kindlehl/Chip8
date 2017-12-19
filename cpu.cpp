@@ -85,12 +85,12 @@ void CPU::init(){
     SDL_SetRenderDrawColor(renderer, 255, 0, 255, 255);
 }
 
-void CPU::LoadRom(const char* filename){
+bool CPU::LoadRom(const char* filename){
     std::ifstream File;
     File.open(filename, std::ios_base::binary);
     if(!File.is_open()){
         std::cout << "ERROR OPENING ROM\n";
-        return;
+        return false;
     }
 
     for(int i = 0x200; !File.eof(); i++ ){
@@ -98,12 +98,13 @@ void CPU::LoadRom(const char* filename){
     }
 
     File.close();
+    return true;
 }
 
 CPU::~CPU(){
     for(int i = 0; i < 17; i++){
-       delete registerLabels[i];
-       delete registerContents[i];
+       //delete registerLabels[i];
+       //delete registerContents[i];
     }
 
 }
@@ -118,15 +119,15 @@ CPU::CPU(SDL_Window* win, SDL_Renderer* ren, QApplication* application){
     initializeLabels();
 }
 
-bool CPU::showDebug(){
+bool CPU::showDebug() const {
     return _showDebug;
 }
 
-bool CPU::running(){
+bool CPU::running() const {
     return _running;
 }
 
-bool CPU::registersUpdated(){
+bool CPU::registersUpdated() const {
     return _registersUpdated;
 }
 
@@ -137,7 +138,7 @@ void CPU::saveRegisterChanges(){
     registerI = registerContents[16]->toPlainText().toInt();
 }
 
-void CPU::draw(){
+void CPU::draw() const {
 
     for(int y = 0; y < 32; y++){
         for(int x = 0; x < 64; x++){
@@ -179,7 +180,7 @@ void CPU::loadRegisters(){
         registerContents[16]->setAlignment(Qt::AlignCenter);
 }
 
-void CPU::printScreen(){
+void CPU::printScreen() const {
     system("clear");
     for(int i = 0; i < 32; i++){
         for(int j = 0; j < 64; j++){
@@ -210,7 +211,7 @@ void CPU::disconnectLabels(){
 
 }
 
-void CPU::push_event(SDL_Event event){
+void CPU::push_event(const SDL_Event& event){
     eventQueue.push(event);
 }
 
@@ -226,7 +227,7 @@ void CPU::openWindow(){
                 _showDebug = false;
 }
 
-int CPU::waitForKeyPress(){
+int CPU::waitForKeyPress() const {
     SDL_Event e;
     bool hang = true;
     while(hang){

@@ -16,7 +16,7 @@ using namespace std;
 int main(int argc, char** argv){
     if(argc == 1){
         cout << "No ROM supplied. \nUsage is ./Chip8 [-options] ROM_Path\n";
-        return -1;
+        return 0;
     }
     QApplication app(argc, argv);
 
@@ -28,7 +28,9 @@ int main(int argc, char** argv){
     clock_t startOfCycle, endOfCycle;
     CPU processor(window, renderer, &app);
     processor.init();
-    processor.LoadRom(argv[1]);
+    if(processor.LoadRom(argv[1]) == false){
+        return 0;
+    }
      
            
 
