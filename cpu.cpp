@@ -2,6 +2,9 @@
 #include "cpu.h"
 #include <cstdlib>
 
+#define Vx(code) registers[(code & 0x0F00) >> 8]
+#define Vy(code) registers[(code & 0x00F0) >> 4]
+
 void CPU::initializeLabels(){
 
       QFont labelFont("Courier", 24, 5);
@@ -319,87 +322,87 @@ void CPU::cycle(){
             PC = opcode & 0x0FFF;
             break;
         case 0x3000:
-            if(registers[(opcode & 0x0F00) >> 8] == (opcode & 0x00FF)){
+            if(Vx(opcode) == (opcode & 0x00FF)){
                 PC +=2;
             }
             break;
         case 0x4000:
-            if(registers[(opcode & 0x0F00) >> 8] != (opcode & 0x00FF)){
+            if(Vx(opcode) != (opcode & 0x00FF)){
                PC +=2;
             }
             break;
 
         case 0x5000:
-            if(registers[(opcode & 0x0F00) >> 8] == registers[(opcode & 0x00F0) >> 4]){
+            if(Vx(opcode) == Vy(opcode)){
                 PC += 2;
             }
             break;
         case 0x6000:
-            registers[(opcode & 0x0F00) >> 8] = (opcode & 0x00FF);
+            Vx(opcode) = (opcode & 0x00FF);
             break;
 
         case 0x7000:
-            registers[(opcode & 0x0F00) >> 8] += (opcode & 0x00FF);
+            Vx(opcode) += (opcode & 0x00FF);
             break;
         case 0x8000:
 
             switch(opcode & 0xF00F){
                 case 0x8000:
-                    registers[(opcode & 0x0F00)>>8] = registers[(opcode & 0x00F0)>>4];
+                    Vx(opcode) = Vy(opcode);
                     break;
                 case 0x8001:
-                    registers[(opcode & 0x0F00) >> 8] = registers[(opcode & 0x00F0) >> 4] | registers[(opcode & 0x0F00) >> 8]; 
+                    Vx(opcode) = Vy(opcode) | Vx(opcode); 
                     break;
                 case 0x8002:
-                    registers[(opcode & 0x0F00) >> 8] = registers[(opcode & 0x00F0) >> 4] & registers[(opcode & 0x0F00) >> 8]; 
+                    Vx(opcode) = Vy(opcode) & Vx(opcode); 
                     break;
                 case 0x8003:
-                    registers[(opcode & 0x0F00) >> 8] = registers[(opcode & 0x00F0) >> 4] ^ registers[(opcode & 0x0F00) >> 8]; 
+                    Vx(opcode) = Vy(opcode) ^ Vx(opcode); 
                     break;
                 case 0x8004:        //add and store carry
-                    if(registers[(opcode & 0x0F00) >> 8] + registers[(opcode & 0x00F0) >> 4] > 255){
+                    if(Vx(opcode) + Vy(opcode) > 255){
                         registers[0xF] = 1;
                     }else{
                         registers[0xF] = 0;
                     }
-                    registers[(opcode & 0x0F00) >> 8]= (registers[(opcode & 0x0F00) >> 8] + registers[(opcode & 0x00F0) >> 4]) % 256; //added modulus to ensure proper carry behavior
+                    Vx(opcode)= (Vx(opcode) + Vy(opcode)) % 256; //added modulus to ensure proper carry behavior
                     break;
                 case 0x8005:
-                    if(registers[(opcode & 0x0F00) >> 8] > registers[(opcode & 0x00F0) >> 4]){
+                    if(Vx(opcode) > Vy(opcode)){
                         registers[0xF] = 1;
                     }else{
                         registers[0xF] = 0;
                     }
-                    registers[(opcode & 0x0F00) >> 8] = registers[(opcode & 0x0F00) >> 8] - registers[(opcode & 0x00F0) >> 4];
+                    Vx(opcode) = Vx(opcode) - Vy(opcode);
                     break;
                 case 0x8006:
-                    if(registers[(opcode & 0x0F00)>>8] % 2 == 1){
+                    if(Vx(opcode) % 2 == 1){
                         registers[0xF] = 1;
                     }else{
                         registers[0xF] = 0;
                     }
-                    registers[(opcode & 0x0F00) >> 8] >>= 1;
+                    Vx(opcode) >>= 1;
                     break;
                 case 0x8007:
-                    if(registers[(opcode & 0x00F0) >> 4] > registers[(opcode & 0x0F00) >> 8]){
+                    if(Vy(opcode) > Vx(opcode)){
                         registers[0xF] = 1;
                     }else{
                         registers[0xF] = 0;
                     }
-                    registers[(opcode & 0x0F00)>>8] = registers[(opcode & 0x00F0) >> 4] - registers[(opcode & 0x0F00) >> 8];
+                    Vx(opcode) = Vy(opcode) - Vx(opcode);
                     break;
                 case 0x800E:
-                    if(registers[(opcode & 0x0F00)>>8] & 0x80){
+                    if(Vx(opcode) & 0x80){
                         registers[0xF] = 1;
                     }else{
                         registers[0xF] = 0;
                     }
-                    registers[(opcode & 0x0F00) >> 8] <<= 1;
+                    Vx(opcode) <<= 1;
                     break;
             }
             break;
         case 0x9000:
-            if(registers[(opcode & 0x0F00) >> 8] != registers[(opcode & 0x00F0) >> 4]){
+            if(Vx(opcode) != Vy(opcode)){
                 PC += 2;
             }
             break;
@@ -410,20 +413,20 @@ void CPU::cycle(){
             PC = ((opcode & 0x0FFF) + registers[0]);
             break;
         case 0xC000:
-            registers[(opcode & 0x0F00) >> 8] = rand()%256 & (opcode & 0x00FF);
+            Vx(opcode) = rand()%256 & (opcode & 0x00FF);
             break;
         case 0xD000:
-            DrawBytes(registers[((opcode & 0x0F00) >> 8)], registers[((opcode & 0x00F0) >> 4 )], (opcode & 0x000F));
+            DrawBytes(Vx(opcode), Vy(opcode), (opcode & 0x000F));
             break;
         case 0xE000:
             switch(opcode & 0xF00F){
-                case 0xE00E:
-                    if(wasPressed(registers[(opcode & 0x0F00) >> 8])){
+                case 0xE00E: 
+                    if(wasPressed(Vx(opcode))){
                         PC+=2;
                     }
                     break;
                 case 0xE001:
-                    if(!wasPressed(registers[(opcode & 0x0F00) >> 8])){
+                    if(!wasPressed(Vx(opcode))){
                         PC += 2;
                     }
                     break;
@@ -433,28 +436,28 @@ void CPU::cycle(){
         case 0xF000:
             switch(opcode & 0xF0FF){
                 case 0xF007:
-                    registers[(opcode & 0x0F00) >> 8] = delayTimer;
+                    Vx(opcode) = delayTimer;
                     break;
                 case 0xF00A:
-                    registers[(opcode & 0x0F00) >> 8] = waitForKeyPress();
+                    Vx(opcode) = waitForKeyPress();
                     break;
                 case 0xF015:
-                    delayTimer = registers[(opcode & 0x0F00) >> 8];
+                    delayTimer = Vx(opcode);
                     break;
                 case 0xF018:
-                    soundTimer = registers[(opcode & 0x0F00)>>8];
+                    soundTimer = Vx(opcode);
                     break;
                 case 0xF01E:
-                    registerI += registers[(opcode & 0x0F00)>>8];
+                    registerI += Vx(opcode);
                     break;
                 case 0xF029:
                     
-                    registerI =  5*(registers[(opcode & 0x0F00) >> 8]);
+                    registerI =  5*(Vx(opcode));
                     break;
                 case 0xF033:
-                    memory[registerI] = registers[((opcode & 0x0F00) >>8)] / 100;
-                    memory[registerI + 1] = (registers[((opcode & 0x0F00) >> 8)] /10)% 10;
-                    memory[registerI + 2] = (registers[((opcode & 0x0F00)>>8)]%100)%10;
+                    memory[registerI] = Vx(opcode) / 100;
+                    memory[registerI + 1] = (Vx(opcode) /10)% 10;
+                    memory[registerI + 2] = (Vx(opcode)%100)%10;
                     std::cout << "BCD: (" << static_cast<int>(memory[registerI]) << ", " << static_cast<int>(memory[registerI + 1]) << ", " << static_cast<int>(memory[registerI + 2]) << ")" << std::endl;
                     break;
                 case 0xF055:
