@@ -26,8 +26,6 @@ class CPU : public QObject{
         void loadOpcode();
         void openWindow();
         void cycle();
-        void disconnectLabels();
-        void connectLabels();
         void ClearScreen();
         void push_event( const SDL_Event& );
         int wasPressed(int);
@@ -37,9 +35,8 @@ class CPU : public QObject{
         void DrawBytes(int, int, int);
         bool registersUpdated() const;
         bool running() const;
-        bool showDebug() const;
-        void debugSignal();
         ~CPU();
+//        void playSound() const ;
         void loadRegisters();
         void saveRegisterChanges();
         void quit();
@@ -70,8 +67,11 @@ class CPU : public QObject{
         SDL_Window* window;
         SDL_Renderer* renderer;
         SDL_Rect pixels[32][64];
+//        SDL_AudioDeviceID AudioDeviceID;
+//        SDL_AudioSpec AudioSpec;
+//        Uint32 beepLength;
+//        Uint8* beepData;
         bool _registersUpdated;
         bool _running;
-        bool _showDebug;
 };
 #endif

@@ -6,7 +6,7 @@
 #include <queue> 
 #include <memory>
 
-#define IPS 300          //instructions per second
+#define IPS 1000          //instructions per second
 #define SPI (float)1/IPS       //seconds per instruction
 #define HEIGHT 320
 
@@ -18,21 +18,19 @@ int main(int argc, char** argv){
         cout << "No ROM supplied. \nUsage is ./Chip8 [-options] ROM_Path\n";
         return 0;
     }
-    QApplication app(argc, argv);
-
     SDL_Init(SDL_INIT_EVERYTHING);
     SDL_Window* window = SDL_CreateWindow("THIS", 0, 0, 2 * HEIGHT,HEIGHT, 0);
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
     queue<SDL_Event> eventQueue;
     SDL_Event event;
     clock_t startOfCycle, endOfCycle;
+    QApplication app(argc, argv);          
     CPU processor(window, renderer, &app);
     processor.init();
     if(processor.LoadRom(argv[1]) == false){
-        return 0;
+        processor.quit();
     }
-     
-           
+
 
     while(processor.running()){
     
@@ -73,5 +71,6 @@ int main(int argc, char** argv){
     }
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
+//    SDL_Quit();
     return 0;
 }
