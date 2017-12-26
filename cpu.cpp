@@ -275,8 +275,9 @@ int CPU::waitForKeyPress() const {
  */
 int CPU::wasPressed(int HexKey){
     SDL_Event event;
-//    std::cout << "wasPressed() was called just now for " << std::hex << HexKey << std::dec << std::endl; 
+    std::cout << "wasPressed() was called just now for " << std::hex << HexKey << std::dec << std::endl; 
 
+    
 
 
 
@@ -284,9 +285,8 @@ int CPU::wasPressed(int HexKey){
         event = eventQueue.front();
         eventQueue.pop();
         if(event.type == SDL_KEYDOWN){
-//            std::cout << "Detected keypress of " << SDL_GetKeyName(event.key.keysym.sym) << std::endl;
+            //std::cout << "Detected keypress of " << SDL_GetKeyName(event.key.keysym.sym) << std::endl;
             auto it = keys.find(event.key.keysym.sym);       //find key in map "SDLK_..."
-
             if(it->second == HexKey){
                 std::cout << "Iterator points to second-" << std::hex << it->second << std::dec <<std::endl;
 
@@ -421,7 +421,7 @@ void CPU::cycle(){
                     Vx(opcode) = Vy(opcode) - Vx(opcode);
                     break;
                 case 0x800E:    //8xyE; shift Vx left. if msb of Vx is 1, set VF
-                    registers[0xF] = Vx(opcode) >= 128 ? 1 : 0;
+                    registers[0xF] = Vx(opcode) & 0x8000 ? 1 : 0;
                     Vx(opcode) <<= 1;
                     break;
             }
