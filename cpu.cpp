@@ -273,13 +273,8 @@ int CPU::waitForKeyPress() const {
 /*
  *  Checks CPU's internal event queue to see if a keypress identical to HexKey in the parameter list
  */
-int CPU::wasPressed(int HexKey){
+bool CPU::wasPressed(int HexKey){
     SDL_Event event;
-    std::cout << "wasPressed() was called just now for " << std::hex << HexKey << std::dec << std::endl; 
-
-    
-
-
 
     while(!eventQueue.empty()){
         event = eventQueue.front();
@@ -288,18 +283,12 @@ int CPU::wasPressed(int HexKey){
             //std::cout << "Detected keypress of " << SDL_GetKeyName(event.key.keysym.sym) << std::endl;
             auto it = keys.find(event.key.keysym.sym);       //find key in map "SDLK_..."
             if(it->second == HexKey){
-                std::cout << "Iterator points to second-" << std::hex << it->second << std::dec <<std::endl;
 
                 //if the key pressed is mapped to Chip8 keyboard return 1
                 return 1;
             }
-        
-        
-
         }
     }   
-  
-
     //no valid keypress was found
     return 0;
 }
@@ -405,12 +394,12 @@ void CPU::cycle(){
                     Vx(opcode) ^= Vy(opcode); 
                     break;
                 case 0x8004:    //8xy4; Vx = Vx + Vy, store carry in VF
-                    registers[0xF] = Vx(opcode) + Vy(opcode) > 255 ? 1 : 0;
+                    registers[0xF] = (Vx(opcode) + Vy(opcode) ) > 255 ? 1 : 0;
                     Vx(opcode) += Vy(opcode);
                     break;
                 case 0x8005:    //8xy5 Vx = Vx - Vy, VF = !borrow
                     registers[0xF] = Vx(opcode) > Vy(opcode) ? 1 : 0;
-                    Vx(opcode) = Vx(opcode) - Vy(opcode);
+                    Vx(opcode) -= Vy(opcode);
                     break;
                 case 0x8006:    //8xy6 Vx = Vx shifted Right once, set truncation
                     registers[0xF] = Vx(opcode) % 2 == 1 ? 1 : 0;
@@ -421,7 +410,7 @@ void CPU::cycle(){
                     Vx(opcode) = Vy(opcode) - Vx(opcode);
                     break;
                 case 0x800E:    //8xyE; shift Vx left. if msb of Vx is 1, set VF
-                    registers[0xF] = Vx(opcode) & 0x8000 ? 1 : 0;
+                    registers[0xF] = (Vx(opcode) & 0x8000) >> 7;
                     Vx(opcode) <<= 1;
                     break;
             }
@@ -435,12 +424,11 @@ void CPU::cycle(){
             registerI = (opcode & 0x0FFF);
             break;
         case 0xB000:    //Bnnn; jump to location nnn + V0
-            PC = ((opcode & 0x0FFF) + registers[0]) & 0xFFF;
+            PC = ((opcode & 0x0FFF) + registers[0]);
             break;
         case 0xC000:    //Cxkk; Vx = random 0-255&kk
             {
                 int random = rand()%256;
-                std::cout << "Randomly generated num: " << random << std::endl;
                 Vx(opcode) = random & KK(opcode);
             }
             break;
@@ -451,7 +439,6 @@ void CPU::cycle(){
             switch(opcode & 0xF00F){
                 case 0xE00E: //Ex9E: skips next instruction if key wth value of Vx is pressed
                     if(wasPressed(Vx(opcode))){
-                        std::cout << "The Key " << xNibble(opcode) << " was pressed; Skip next instruction";
                         PC+=2;
                     }
                     break;
@@ -470,7 +457,6 @@ void CPU::cycle(){
                     break;
                 case 0xF00A: //Fx0A; wait for key press, store value in Vx
                     Vx(opcode) = waitForKeyPress();
-                    std::cout << "Waited for key press, got back: " << Vx(opcode) << std::endl;
                     break;
                 case 0xF015: //Fx15 set delay timer to Vx
                     delayTimer = Vx(opcode);
